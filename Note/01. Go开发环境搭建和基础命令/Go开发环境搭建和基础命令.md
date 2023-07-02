@@ -730,6 +730,23 @@ nothing to commit, working tree clean
 6. 更新内容
 
 ```bash
+david@Davids-MBP Go_6 % ls      
+Code		Note		README.md
+david@Davids-MBP Go_6 % git add .
+david@Davids-MBP Go_6 % git commit -m "update 01. Go开发环境搭建和基础命令" 
+[main cccf8ac] update 01. Go开发环境搭建和基础命令
+ 2 files changed, 81 insertions(+), 1 deletion(-)
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702164902269.png
+david@Davids-MBP Go_6 % git push -u origin
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 45.57 KiB | 15.19 MiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:goeasy2022/Go_6.git
+   e5f88c1..cccf8ac  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
 ```
 
 
