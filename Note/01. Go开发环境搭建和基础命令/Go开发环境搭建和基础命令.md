@@ -339,7 +339,7 @@ go 1.18 // 这个module名称就是该项目的module名
 
 ![image-20230702153717531](Go开发环境搭建和基础命令.assets/image-20230702153717531.png)
 
-# 5. 第一个Go
+# 5. 第一个Go程序
 
 1. 在根目录下创建`helloworld`目录，然后创建`main.go`文件
 
@@ -650,7 +650,87 @@ The key's randomart image is:
 
 5. 在Macbook初始化项目目录
 
+```bash
+david@Davids-MBP Go_6 % ls        
+Code	Note
+david@Davids-MBP Go_6 % ls -a
+.	..	Code	Note
+david@Davids-MBP Go_6 % echo "# Go_6 Study Notes and Codes" >> README.md
+david@Davids-MBP Go_6 % git init
+Initialized empty Git repository in /Users/david/Documents/Go_6/.git/
+david@Davids-MBP Go_6 % git add .
+david@Davids-MBP Go_6 % git commit -m "first commit"
+[master (root-commit) e5f88c1] first commit
+ 43 files changed, 693 insertions(+)
+ create mode 100644 Code/demo/go.mod
+ create mode 100644 Code/demo/go.sum
+ create mode 100755 Code/demo/helloworld/helloworld
+ create mode 100755 Code/demo/helloworld/main
+ create mode 100644 Code/demo/helloworld/main.go
+ create mode 100644 Code/demo/sum/sum.go
+ create mode 100644 Code/demo/var/var.go
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230629013256720.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230629143044747.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230629143114003.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230629143140463.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230629143204861.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230629143247362.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230630025334333.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230701201157309.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230701201714877.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230701201730561.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230701201748545.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230701201832629.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702011745181.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702011808503.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702012016275.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702012048792.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702012418882.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702134151045.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702153717531.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702154239607.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702154446929.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702154552353.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702155739185.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702155756229.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702155803145.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702160324523.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702160449769.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702160511925.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702160630646.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702163355054.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702163430659.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702164539261.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.assets/image-20230702164602601.png
+ create mode 100644 Note/01. Go开发环境搭建和基础命令/Go开发环境搭建和基础命令.md
+ create mode 100644 Note/02. Go基础语法/Go基础语法.md
+ create mode 100644 README.md
+david@Davids-MBP Go_6 % git branch -M main
+david@Davids-MBP Go_6 % git remote add origin git@github.com:goeasy2022/Go_6.git
+david@Davids-MBP Go_6 % git push -u origin main
+Counting objects: 53, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (45/45), done.
+Writing objects: 100% (53/53), 3.18 MiB | 770.00 KiB/s, done.
+Total 53 (delta 0), reused 0 (delta 0)
+To github.com:goeasy2022/Go_6.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+david@Davids-MBP Go_6 % git status
+On branch main
+Your branch is up to date with 'origin/main'.
 
+nothing to commit, working tree clean
+```
+
+因为我的davidwang794@gmail.com注册了Github账号，所以会显示上传者是ChickenWinner2019。
+
+![image-20230702164902269](Go开发环境搭建和基础命令.assets/image-20230702164902269.png)
+
+6. 更新内容
+
+```bash
+```
 
 
 
